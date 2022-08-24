@@ -155,11 +155,13 @@ p {
 .intro{
 	display: inline-flex;
 	margin-top: 2rem;
+	height: 40rem;
 }
 .intro .text{ 
 	display: inline;
 	margin-top: 4rem;
 	margin-left: 6rem;
+	height: 30rem;
 	width : 50%;
 }
 .text h2{
@@ -173,9 +175,11 @@ p {
 .text h3{
 	font-size: 2rem;
 	color: var(--clr-grey-6);
+	margin-top: 10rem;
 }
 .input-box{
 	display: flex;
+	margin-top: 2rem;
 }
 .input-box input{
 	height: 4rem;
@@ -210,6 +214,7 @@ p {
 .intro2{
 	display: inline-flex;
 	margin-top: 2rem;
+	height: 20rem;
 }
 .intro2 .text{ 
 	display: inline;
@@ -227,15 +232,16 @@ p {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	margin-top: 2rem;
-	gap: 1.5rem;
+	gap: 1.3rem;
+	row-gap: 2rem;
 	transition: linear;
 }
 .box{
 	display: flex ;
 	border: 0.05rem solid var(--clr-black);
 	border-radius: 6px;
-	height: 4rem;
-	width: 19rem;
+	height: 6rem;
+	width: 21rem;
 	align-items: center;
 	justify-content: center;
 	box-shadow: var(--light-shadow);
@@ -294,7 +300,8 @@ p {
 	border-radius: 20px ;
 	border-width: 20px;
 	border : 18px solid rgb(13, 9, 38);
-	margin-bottom: 3rem;
+	margin-bottom: 8rem;
+	box-shadow: 0 15px 40px var(--clr-black);
 }
 .intro3{
 	display: flex;
@@ -309,7 +316,8 @@ p {
 }
 .white{
 	display: flex;
-	margin-top: 2rem;
+	align-items: center;
+	height: 50rem;
 	background: var(--clr-white);
 }
 .box-btn-free{

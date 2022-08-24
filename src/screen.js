@@ -1,6 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { images } from './data/images';
 
+
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 export default function Screen() {
 
 	const [index, setIndex] = useState(0);
@@ -17,8 +21,12 @@ export default function Screen() {
 
 	}, [index]);
 
+	useEffect(() => {
+		Aos.init();
+	}, []);
+
 	return (
-		<div className='screen-box'>
+		<div data-aos="fade-up" data-aos-duration="5000" className='screen-box'>
 			<img src={images[index]} alt='screen' />
 		</div>
 	);

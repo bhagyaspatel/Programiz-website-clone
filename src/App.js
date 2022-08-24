@@ -13,6 +13,9 @@ import Line from './line';
 import Screen from './screen';
 import CourseCards from './courseCards';
 
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+
 const App = () => {
 
 	const [showAll, setshowAll] = useState(true); //to set showAll on number of ocourses visible
@@ -46,6 +49,10 @@ const App = () => {
 
 	}, [greenIndex]);
 
+	useEffect(() => {
+		Aos.init({ duration: 3000 });
+	}, []);
+
 	return (
 		<div className='page'>
 			<Navbar />
@@ -71,7 +78,7 @@ const App = () => {
 
 			<span className='intro2'>
 				<div className='text'>
-					<h3 >Choose What to learn</h3>
+					<h3 style={{ marginTop: "2rem" }}>Choose What to learn</h3>
 					<p>Start learning programming language of your choice.</p>
 				</div>
 				<div className='courses'>
@@ -92,16 +99,16 @@ const App = () => {
 
 			<span className='intro3 grey'>
 				<div className='text'>
-					<h2>Programiz PRO
+					<h2 data-aos="fade-right">Programiz PRO
 						Prepare for Your Career</h2>
-					<ul className='options'>
+					<ul data-aos="fade-right" className='options'>
 						{
 							lines.map((line, index) => {
 								return <Line key={index} line={line} index={index} greenIndex={greenIndex} />;
 							})
 						}
 					</ul>
-					<button className='box-btn-free' onClick={() => handle()}>
+					<button data-aos="flip-right" data-aos-duration="1000" className='box-btn-free' onClick={() => handle()}>
 						Join for FREE
 					</button>
 				</div>
@@ -112,7 +119,7 @@ const App = () => {
 			</span>
 
 			<span className='intro3 white' style={{ marginTop: "0rem", paddingTop: "5rem" }}>
-				<div className='text'>
+				<div data-aos="fade-right" className='text'>
 					<h2>Enroll Now
 						for FREE</h2>
 
